@@ -20,6 +20,7 @@ import Insurance_Purchase from "./pages/Insurance_Purchase";
 import { Insurance_buy } from "./pages/insurance_buy";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Track from "./pages/Track";
 
 function App() {
   const [cookies] = useCookies(["jwt"]);
@@ -71,6 +72,7 @@ function App() {
         <Route path="/government_dashboard" element={<State_Dashboard />} />
         <Route path="/insurance_dashboard" element={<Insurance_Dashboard />} />
         <Route path="/insurance_purchase" element={<Insurance_Purchase />} />
+        <Route path="/track/:claim_id" element={<Track />} />
         <Route
           path="/insurance/buy/:insurance_id"
           element={<Insurance_buy />}
